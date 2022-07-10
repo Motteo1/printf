@@ -1,28 +1,21 @@
 #include "main.h"
 
 /**
- * _printf - Receives the main string and all the necessary parameters to
- * print a formated string
- * @format: A string containing all the desired characters
- * Return: A total count of the characters printed
+ * print_c - print a char argument
+ * @args: va_list containing the char to print as the next element
+ *
+ * Return: the number of bytes printed
  */
-int _printf(const char *format, ...)
+
+int print_c(va_list args)
 {
-	int printed_chars;
-	conver_t f_list[] = {
-		{"c", print_char},
-		{"s", print_string},
-		{"%", print_percent},
-		{NULL, NULL}
-	};
-	va_list arg_list;
+	char C = va_arg(args, int);
+	int count = 0, retval;
 
-	if (format == NULL)
+	retval = _putchar(C);
+	if (retval == -1)
 		return (-1);
+	count++;
 
-	va_start(arg_list, format);
-	/*Calling parser function*/
-	printed_chars = parser(format, f_list, arg_list);
-	va_end(arg_list);
-	return (printed_chars);
+	return (count);
 }
