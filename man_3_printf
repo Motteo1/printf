@@ -115,7 +115,7 @@ int main(void)
 
 	_printf(''Hello Alx! contains %d characters'', length);
 
-	length = _printf(''Hello Al!'');
+	length = _printf(''Hello Alx!'');
 
 	return (0);
 
@@ -123,4 +123,4 @@ int main(void)
 .SH SEE ALSO
 .R printf(3)
 .SH AUTHORS
-Written by \Tim and Bereket
+Written by \Tim\fR and \Bereket\fR.
