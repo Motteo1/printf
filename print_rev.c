@@ -17,7 +17,7 @@ int print_rev(va_list arguments, char *buf, unsigned int ibuf)
 	str = va_arg(arguments, char *);
 	if (str == NULL)
 	{
-		for (i = 0; nill[]; i++)
+		for (i = 0; nill[i]; i++)
 			ibuf = handl_buf(buf, nill[i], ibuf);
 		return (6);
 	}
