@@ -16,7 +16,7 @@ int print_bnr(va_list arguments, char *buf, unsigned int ibuf)
 	isnegative = 0;
 	if (int_input == 0)
 	{
-		ibuf = handl_buf(buf, '0'' ibuf);
+		ibuf = handl_buf(buf, '0', ibuf);
 		return (1);
 	}
 	if (int_input < 0)
