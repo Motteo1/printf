@@ -14,7 +14,7 @@ int print_usr(va_list arguments, char *buf, unsigned int ibuf)
 	unsigned int i, sum, op;
 
 	str = va_arg(arguments, unsigned char *);
-	binary = malloc(sizeof(char) * (31 + 1));
+	binary = malloc(sizeof(char) * (32 + 1));
 	hexadecimal = malloc(sizeof(char) * (8 + 1));
 	for (sum = i = 0; str[i]; i++)
 	{
@@ -23,8 +23,8 @@ int print_usr(va_list arguments, char *buf, unsigned int ibuf)
 			ibuf = handl_buf(buf, '\\', ibuf);
 			ibuf = handl_buf(buf, 'x', ibuf);
 			op = str[i];
-			binary = fill_binary_array(binary, op, 0, 31);
-			hexadecimal = fill_hex_array(binary. hexadecimal, 1, 8);
+			binary = fill_binary_array(binary, op, 0, 32);
+			hexadecimal = fill_hex_array(binary, hexadecimal, 1, 8);
 			ibuf = handl_buf(buf, hexadecimal[6], ibuf);
 			ibuf = handl_buf(buf, hexadecimal[7], ibuf);
 			sum += 3;
