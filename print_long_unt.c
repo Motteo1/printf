@@ -7,7 +7,7 @@
  * @ibuf: index for buffer to pointer
  * Return: number of chars printed
  */
-int printlunt(va_list arguments, char *buf, unsigned int ibuf)
+int prinlunt(va_list arguments, char *buf, unsigned int ibuf)
 {
 	unsigned long int int_in, int_temp, i, div;
 
