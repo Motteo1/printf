@@ -12,7 +12,7 @@ char *fill_long_oct_array(char *bnr, char *oct)
 	int op, i, j, ioct, limit;
 
 	oct[22] = '\0';
-	for (i = 63, oct = 21; i >= 0; i--, ioct--)
+	for (i = 63, ioct = 21; i >= 0; i--, ioct--)
 	{
 		if (i > 0)
 			limit = 4;
